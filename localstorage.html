@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local Storage</title>
+  </head>
+  <body>
+    <script>
+      //storing data in local storage
+      localStorage.setItem("name", "Samuel Owusu");
+      localStorage.setItem("city", "Obuasi");
+      localStorage.setItem("school", "FIS");
+      localStorage.setItem("age", "16");
+
+      //retrieving data from local storage
+      let storedName = localStorage.getItem("name");
+      let storedCity = localStorage.getItem("city");
+      let storedSchool = localStorage.getItem("school");
+      let storedAge = localStorage.getItem("age");
+
+      console.log(
+        `username is ${storedName} from ${storedCity}
+         and you attends school at ${storedSchool} and you are ${storedAge} years of age`
+      );
+    </script>
+  </body>
+</html>

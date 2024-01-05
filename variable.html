@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variables</title>
+  </head>
+  <body>
+    <button onclick="console.log(`Cart Quantity: ${cart}`);">
+      Show Quantity
+    </button>
+    <button
+      onclick="
+    cart++;
+    console.log(`Cart Quantity: ${cart}`);"
+    >
+      Add to Cart
+    </button>
+    <button
+      onclick="
+    cart +=2;
+    console.log(`Cart Quantity: ${cart}`);"
+    >
+      +2
+    </button>
+    <button
+      onclick="
+    cart +=3;
+    console.log(`Cart Quantity: ${cart}`);"
+    >
+      +3
+    </button>
+    <button
+      type="reset"
+      onclick="
+    cart = 0;
+    console.log(`Cart Quantity: ${cart}`);"
+    >
+      Reset Cart
+    </button>
+    <script>
+      let cart = 0;
+    </script>
+  </body>
+</html>
