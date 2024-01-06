@@ -15,7 +15,29 @@
       Subscribe
     </button>
 
+    <p>Alibaba Shipping Calculator</p>
+    <p>Orders under $40 =+$10 shipping.</p>
+    <p>Orders over $40 = Free shipping.</p>
+
+    <input class="textInput" placeholder="Cost of order" />
+    <button onclick="calculateTotal();">Calculate</button>
+
+    <p class="shipping-fee"></p>
+
     <script>
+      function calculateTotal() {
+        const inputFee = document.querySelector(".textInput");
+
+        let inputAmount = Number(inputFee.value);
+
+        if (inputAmount < 40) {
+          inputAmount = inputAmount + 10;
+        }
+
+        document.querySelector(".shipping-fee").innerHTML = `$${inputAmount}`;
+      }
+
+      // function for subscribed
       function subscribe() {
         const subscribeBtn = document.querySelector(".js-subscribe-button");
 
