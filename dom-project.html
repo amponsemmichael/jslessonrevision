@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Project</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Buton</p>
+    <button
+      onclick="subscribe();"
+      class="js-subscribe-button"
+      style="background-color: lightgrey"
+    >
+      Subscribe
+    </button>
+
+    <script>
+      function subscribe() {
+        const subscribeBtn = document.querySelector(".js-subscribe-button");
+
+        if (subscribeBtn.innerText === "Subscribe") {
+          subscribeBtn.innerHTML = "Already Subscribed";
+        } else {
+          subscribeBtn.innerHTML = "Subscribe";
+        }
+      }
+    </script>
+  </body>
+</html>
