@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Grade 7 Terminal Report</title>
+  </head>
+  <body>
+    <h1>SILOAM MISSION ACADEMY</h1>
+    <div class="horizontal-line">
+      <label for="name" style="width: 80px">NAME:</label>
+      <input
+        type="text"
+        maxlength="64"
+        id="name"
+        placeholder="Enter student's name"
+      />
+
+      <label for="class" style="margin-left: 200px; width: 128px">CLASS:</label>
+      <input
+        type="text"
+        maxlength="64"
+        id="class"
+        placeholder="Enter student's class"
+      />
+    </div>
+    <div class="horizontal-line">
+      <label for="term" style="width: 80px; margin-left: 0">TERM:</label>
+      <input
+        type="text"
+        maxlength="10"
+        id="term"
+        placeholder="Enter current term"
+      />
+
+      <label for="term-ending" style="width: 128px; margin-left: 210px"
+        >TERM ENDING:</label
+      >
+      <input
+        type="date"
+        name=""
+        id="term-ending"
+        placeholder="enter date"
+        style="margin-left: 0"
+      />
+    </div>
+
+    <div class="horizontal-line">
+      <label for="next-term-begin" ; style="margin-left: 2px"
+        >NEXT TERM BEGIN:</label
+      >
+      <input
+        type="date"
+        id="next-term-begin"
+        placeholder="Enter next term's date"
+      />
+
+      <label for="number-in-class" style="margin-left: 143px">
+        NO. IN CLASS:</label
+      >
+      <input type="number" maxlength="64" id="number-in-class" />
+    </div>
+    <div class="horizontal-line">
+      <label for="average">AVERAGE:</label>
+      <input type="text" maxlength="64" id="average" />
+
+      <label for="position" style="margin-left: 200px">POSITION:</label>
+      <input type="text" maxlength="64" id="position" />
+    </div>
+
+    <label for="examScores"
+      >Enter Exam Scores for All Subjects (comma-separated, 0-60):</label
+    >
+    <input
+      type="text"
+      id="examScores"
+      placeholder="e.g., 50,45,60,55,58,50,45,40,55,48"
+    />
+
+    <label for="classScores"
+      >Enter Class Scores for All Subjects (comma-separated, 0-40):</label
+    >
+    <input
+      type="text"
+      id="classScores"
+      placeholder="e.g., 30,35,40,25,38,30,35,20,30,28"
+    />
+
+    <p id="errorMessages" class="error"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>SUBJECT</th>
+          <th>EXAMS SCORE</th>
+          <th>CLASS SCORE</th>
+          <th>TOTAL SCORE</th>
+          <th>GRADING</th>
+          <th>REMARKS</th>
+          <th>CLASSIFICATION</th>
+        </tr>
+      </thead>
+      <tbody id="reportBody">
+        <!-- Report data will be inserted here using JavaScript -->
+      </tbody>
+    </table>
+
+    <button onclick="generateReport()">Generate Report</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

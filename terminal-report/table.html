@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade 7 Terminal Report</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Grade 7 Terminal Report</h1>
+
+    <label for="examScores"
+      >Enter Exam Scores for All Subjects (comma-separated, 0-60):</label
+    >
+    <input type="text" id="examScores" placeholder="e.g., 50,45,60,55" />
+
+    <label for="classScores"
+      >Enter Class Scores for All Subjects (comma-separated, 0-40):</label
+    >
+    <input type="text" id="classScores" placeholder="e.g., 30,35,40,25" />
+
+    <p id="errorMessages" class="error"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Exam Score</th>
+          <th>Class Score</th>
+          <th>Overall Total</th>
+          <th>Overall Grade</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody id="reportBody">
+        <!-- Report data will be inserted here using JavaScript -->
+      </tbody>
+    </table>
+
+    <button onclick="generateReport()">Generate Report</button>
+    <script src="script.js"></script>
+  </body>
+</html>
